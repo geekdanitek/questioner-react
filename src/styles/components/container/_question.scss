@@ -1,0 +1,186 @@
+.Question {
+    min-height: 100vh;
+    .meetup-title-area {
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .meetup-title {
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    .question-card {
+        border: 1px solid rgba(0,0,0,.125);
+        border: 1px solid #81d4fa;
+        width: 100%;
+        height: 370px;
+        padding: 0 20px;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-clip: border-box;
+        transition-duration: 1s;
+        margin: 20px 0;
+        background-color: #ffffff;
+    }
+    
+    .question-card:first-child, .question-card:last-child {
+        margin: 0;
+    }
+    
+    .question-card-title {
+        margin: 15px 0 6px;
+        color: #343a40;
+    }
+    
+    
+    .question-card-body-content {
+      width: 100%;
+      float: left;
+    }
+    
+    .question-card-comments {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.81);
+    }
+    
+    .question-card-description p {
+        color: #343a40;
+        font-size: 17px;
+    }
+    
+    .question-card-input-section {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 10px 0 4px;
+    }
+    
+    .question-card-comment-area {
+        margin: 10px 0 0;
+    }
+    
+    .question-card-input-section >textarea {
+        padding: 8px 20px;
+        border: 1px solid #29b6f6;
+        width: 100%;
+        border-radius: 5px;
+        resize: none;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    }
+    
+    
+    .question-card-button-area {
+        text-align: right;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .question-card-button-area >button {
+        cursor: pointer;
+        padding: 8px 28px;
+        background-color: #29b6f6;
+        border: none;
+        transition-duration: 0.4s;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+    .question-card-button-area >button:hover {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    }
+    .question-card-body {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .question-card-footer {
+        text-align: left;
+        font-weight: 500;
+        margin-top: -20px;
+        color: rgba(0,0,0,.54);
+    }
+    
+    .section {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+    
+    }
+    .section-left {
+        padding-right: 20px;
+        height: 50px;
+        margin-top: 60px;
+        grid-column: 1;
+    }
+    .section-right {
+        grid-column: 2;
+    }
+    
+    .vote {
+        min-width: 46px;
+        text-align: center;
+    }
+    .vote >span {
+        font-weight: 800;
+        color: rgba(0,0,0,.54);
+    }
+    .vote-up {
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        height: 30px;
+        width: 30px;
+        text-indent: -9999em;
+        font-size: 1px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 2px;
+        background-image: url("https://geekdanitek.github.io/andela_fellowship_cycle_40/UI/assets/images/chevron-36-433998.png"), none;
+        background-color: #fff;
+        border: none;
+    }
+    
+    .vote-down {
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        height: 30px;
+        width: 30px;
+        text-indent: -9999em;
+        font-size: 1px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 2px;
+        background-image: url("https://geekdanitek.github.io/andela_fellowship_cycle_40/UI/assets/images/chevron-33-433995.png"), none;
+        background-color: #fff;
+        border: none;
+    }
+    
+    @media (max-width: 575.98px) { 
+        .meetup-title-area { 
+            width: 100%;
+        }
+        .meetup-title {
+            font-size: 19px;
+        }
+        .question-card {
+            width: 100%;
+            height: auto;
+        }
+        .question-card-comments {
+            font-size: 12px
+        }
+        .question-card-footer {
+            padding-bottom: 20px;
+            text-align: right;
+        }
+        .question-card-button-area {
+            text-align: left;
+        }
+    }
+}

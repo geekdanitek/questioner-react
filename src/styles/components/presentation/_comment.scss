@@ -1,0 +1,33 @@
+.Comment {
+    .comment-area {
+        margin-bottom: 29px;
+        margin-left: 30px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #bdbdbd;
+        width: 92%;
+    }
+    
+    .who-commented {
+        display: inline-flex;
+    }
+    .who-commented h4 {
+        color: #29b6f6;
+        margin: 0;
+    }
+    
+    .who-commented small {
+        color: rgba(0, 0, 0, 0.81);
+        margin-top: 4px;
+        padding-left: 9px;
+        
+    }
+    
+    .comment-details {
+        margin: 10px 0 0;
+    }
+    @media (max-width: 575.98px) { 
+        .comment-area {
+            width: 85%;
+        }
+    }
+}

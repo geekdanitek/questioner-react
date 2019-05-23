@@ -10,6 +10,7 @@ import Login from '../components/container/Login';
 import Signup from '../components/container/Signup';
 import Profile from '../components/container/Profile';
 import Questions from '../components/container/Questions';
+import Question from '../components/container/Question';
 
 const Routes = () => (
   <Router>
@@ -19,6 +20,7 @@ const Routes = () => (
       <Route path='/home' component={LandingPage} exact />
       <Route path='/' component={Profile} exact />
       <Route path='/questions' component={Questions} exact />
+      <Route path='/question/:id' component={Question} exact />
       <Route component={NotFound} />
     </Switch>
   </Router>

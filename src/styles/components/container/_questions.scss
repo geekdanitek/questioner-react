@@ -1,0 +1,65 @@
+.Questions {
+    min-height: 100vh;
+    .meetup-title-area {
+        /*border-radius: 5px;
+        border: 1px solid #81d4fa;
+        padding: 20px;*/
+        text-align: center;
+    }
+    
+    .meetup-text {
+        color: rgba(0,0,0,.54);
+    }
+    
+    .meetup-title {
+        font-size: 25px;
+    }
+    
+    .questions-area {
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .ask-question-button-area {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        margin: 30px 0;
+    }
+    .ask-question-button-area >a button {
+        cursor: pointer;
+        padding: 14px 50px;
+        background-color: #29b6f6;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        transition-duration: 0.4s;
+        font-size: 17px;
+    }
+    
+    .ask-question-button-area >a button:hover {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    }
+    
+    @media (max-width: 575.98px) { 
+    
+        .ask-question-button-area {
+            justify-content: center;
+        }
+    
+        .ask-question-button-area >a button {
+            padding: 10px 46px;
+        }
+    
+        .meetup-title {
+            font-size: 19px;
+        }
+        .questions-area {
+            width: 100%;
+        }
+    }
+}

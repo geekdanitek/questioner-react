@@ -4,13 +4,17 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import App from '../App';
+import LandingPage from '../components/container/Landing';
 import NotFound from '../components/container/NotFound';
+import Login from '../components/container/Login';
+import Signup from '../components/container/Signup';
 
 const Routes = () => (
   <Router>
     <Switch>
-      <Route path='/' component={App} exact />
+      <Route path='/login' component={Login} exact />
+      <Route path='/signup' component={Signup} exact />
+      <Route path='/' component={LandingPage} exact />
       <Route component={NotFound} />
     </Switch>
   </Router>

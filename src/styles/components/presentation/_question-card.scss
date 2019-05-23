@@ -1,0 +1,164 @@
+.QuestionCard {    
+    .questions-card {
+        width: 100%;
+        height: 160px;
+        padding: 0 20px;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-clip: border-box;
+        transition-duration: 1s;
+        margin: 20px 0;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,0.11);
+    }
+    
+    .questions-card:hover { 
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,0.30);
+    }
+    .questions-card:first-child, .questions-card:last-child {
+        margin: 0;
+    }
+    
+    .questions-card-title {
+        margin: 15px 0 11px;
+        color: #343a40;
+    }
+    
+    .questions-card-vote-area {
+      width: 10%;
+      float: left;
+      height: 50px;
+    }
+    
+    .questions-card-body-content {
+      width: 75%;
+      float: left;
+      height: 50px;
+    }
+    
+    .questions-card-comments {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.81);
+    }
+    
+    .questions-card-body {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .questions-card-button-area {
+         margin: 15px 0;
+    }
+    
+    .questions-card-button-area >a button {
+        cursor: pointer;
+        padding: 8px 25px;
+        background-color: #29b6f6;
+        border: none;
+        transition-duration: 0.4s;
+        border-radius: 5px;
+        color: #ffffff;
+        transition-duration: 0.4s;
+        font-size: 15px;
+    }
+    
+    .questions-card-button-area >a button:hover {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    }
+    
+    .questions-card-footer {
+        text-align: right;
+        font-weight: 500;
+        /*margin-top: 47px;*/
+        width: 434px;
+        color: rgba(0,0,0,.54);
+    }
+    
+    .section {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+    
+    }
+    .section-left {
+        padding-right: 20px;
+        height: 50px;
+        grid-column: 1;
+        margin-top: 20px;
+    }
+    .section-right {
+        grid-column: 2;
+    }
+    
+    .vote {
+        min-width: 46px;
+        text-align: center;
+    }
+    .vote >span {
+        font-weight: 800;
+        color: rgba(0,0,0,.54);
+    }
+    .vote-up {
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        height: 30px;
+        width: 30px;
+        text-indent: -9999em;
+        font-size: 1px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 2px;
+        background-image: url("https://geekdanitek.github.io/andela_fellowship_cycle_40/UI/assets/images/chevron-36-433998.png"), none;
+        background-color: #fff;
+        border: none;
+    }
+    
+    .vote-down {
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        height: 30px;
+        width: 30px;
+        text-indent: -9999em;
+        font-size: 1px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 2px;
+        background-image: url("https://geekdanitek.github.io/andela_fellowship_cycle_40/UI/assets/images/chevron-33-433995.png"), none;
+        background-color: #fff;
+        border: none;
+    }
+    
+    @media (max-width: 575.98px) { 
+        .questions-card {
+            width: 100%;
+            height: auto;
+            padding: 0 5px;
+        }
+        .questions-card-title {
+            font-size: 15px;
+            margin: 8px 8px 6px;
+        }
+    
+        .questions-card-footer {
+            margin-bottom: 5px;
+        }
+    
+        .questions-card-comments {
+            font-size: 12px;
+        }
+        .questions-card-button-area >a button {
+            padding: 7px 12px;
+        }
+    
+        .questions-card-body-content {
+            width: 100%;
+            float: none; 
+            height: initial; 
+        }
+    }
+}

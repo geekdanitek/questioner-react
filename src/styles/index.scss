@@ -1,0 +1,75 @@
+@import "./base/settings";
+@import "./components/presentation/header.scss";
+@import "./components/presentation/footer.scss";
+@import "./components/container/landing.scss";
+@import "./components/container/login.scss";
+
+* {
+    font-family: 'Lato';
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+html {
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 62px;
+	overflow: auto;
+	margin: 0;
+	background-color: #fafafa;
+	font-size: 14px;
+
+}
+
+/*Helper styles*/
+.mar-0 {
+	margin: 0px !important;
+}
+
+.mar-t-0 {
+	margin-top: 0px !important;
+}
+
+.mar-b-0 {
+	margin-bottom: 0px !important; 
+}
+
+.mar-l-0 {
+	margin-left: 0px !important;
+}
+
+.mar-r-0 {
+	margin-right: 0px !important;
+}
+
+.pad-0 {
+	padding: 0px !important;
+}
+
+.pad-t-0 {
+	padding-top: 0px !important;
+}
+
+.pad-b-0 {
+	padding-bottom: 0px !important; 
+}
+
+.pad-l-0 {
+	padding-left: 0px !important;
+}
+
+.pad-r-0 {
+	padding-right: 0px !important;
+}
+
+/*Helper styles ends*/

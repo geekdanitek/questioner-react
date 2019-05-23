@@ -8,6 +8,8 @@
 @import "./components//presentation/top-question-card.scss";
 @import "./components/container/questions.scss";
 @import "./components/presentation/question-card.scss";
+@import "./components/container/question.scss";
+@import "./components//presentation/comment.scss";
 
 * {
     font-family: 'Lato';
@@ -76,5 +78,16 @@ body {
 .pad-r-0 {
 	padding-right: 0px !important;
 }
+
+.container {
+	position: relative;
+	float: none;
+	clear: both;
+	margin: 40px auto 0px;
+	width: 100%;
+	max-width: 880px;
+	padding: 0 30px;
+}
+
 
 /*Helper styles ends*/

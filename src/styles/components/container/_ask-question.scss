@@ -1,0 +1,93 @@
+.AskQuestion {
+    min-height: 100vh;
+    .meetup-title-area {
+
+    }
+    
+    .meetup-title {
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    .ask-question-area {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .ask-question-form-area {
+        margin-top: 10px;
+        position: relative;
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-clip: border-box;
+    }
+    
+    .ask-question-form-text {
+        text-align: center;
+    }
+    
+    .ask-question-input-section {
+        display: block;
+        box-sizing: border-box;
+        margin: 10px 10px;
+        width: 100%;
+    }
+    
+    .ask-question-input-section >input {
+        padding: 18px 20px;
+        border: 1px solid #29b6f6;
+        width: 96%;
+        border-radius: 5px;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        background-color: #ffffff;
+    }
+    .ask-question-input-section >textarea {
+        padding: 18px 20px;
+        border: 1px solid #29b6f6;
+        width: 96%;
+        border-radius: 5px;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        height: 200px;
+        resize: none;
+    }
+    
+    .ask-question-form-submit >button {
+        cursor: pointer;
+        padding: 14px 50px;
+        background-color: #29b6f6;
+        border: none;
+        transition-duration: 0.4s;
+        border-radius: 5px;
+        color: #ffffff;
+        margin-left: 10px;
+    }
+    
+    .ask-question-form-submit >button:hover {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    }
+    
+    @media (max-width: 575.98px) {
+        .meetup-title {
+            font-size: 20px;
+        }
+        .ask-question-input-section {
+            width: 100%;
+            margin: 10px 0;
+        }
+        .ask-question-input-section >input {
+            width: 100%;
+        }
+        .ask-question-input-section >textarea {
+            width: 100%;
+        }
+        .ask-question-form-submit >button {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}

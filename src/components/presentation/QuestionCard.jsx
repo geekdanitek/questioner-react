@@ -24,7 +24,7 @@ const QuestionCard = () => (
                 <b>14th, Dec 2018</b>
               </span>
               <div className='questions-card-button-area'>
-                <Link to='/question'>
+                <Link to='/question/hello'>
                   <button>
                       View Question
                   </button>

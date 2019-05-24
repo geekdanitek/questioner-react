@@ -13,11 +13,11 @@ class Profile extends Component {
           <div className='user-profile-area'>
             <div className='container'>
               <div className='meetups-link'>
-                <a href='./createmeetup.html'>
+                <Link to='/meetup/create'>
                   <button>
-                  Create A Meetup
+                    Create A Meetup
                   </button>
-                </a>
+                </Link>
                 <Link to='/meetups'>
                   <button>
                   View All Meetups

@@ -8,7 +8,7 @@ const Header = () => (
       <nav className='questionaire-nav'>
         <div className='nav-container'>
           <div className='nav-left'>
-            <a href='./index.html'><h2>QUESTIONER</h2></a>
+            <Link to='/'><h2>QUESTIONER</h2></Link>
           </div>
           <div className='nav-right'>
             <Link to='hee'>

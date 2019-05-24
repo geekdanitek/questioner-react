@@ -11,6 +11,7 @@ import Signup from '../components/container/Signup';
 import Profile from '../components/container/Profile';
 import Questions from '../components/container/Questions';
 import Question from '../components/container/Question';
+import AskQuestion from '../components/container/AskQuestion';
 
 const Routes = () => (
   <Router>
@@ -21,6 +22,7 @@ const Routes = () => (
       <Route path='/' component={Profile} exact />
       <Route path='/questions' component={Questions} exact />
       <Route path='/question/:id' component={Question} exact />
+      <Route path='/askquestion' component={AskQuestion} exact />
       <Route component={NotFound} />
     </Switch>
   </Router>

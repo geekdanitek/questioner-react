@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../presentation/Header';
 import Footer from '../presentation/Footer';
 import QuestionCard from '../presentation/QuestionCard';
@@ -17,11 +18,11 @@ class Questions extends Component {
                 </div>
               </div>
               <div className='ask-question-button-area'>
-                <a href='./askquestion.html'>
+                <Link to='/askquestion'>
                   <button>
                     Ask A Question
                   </button>
-                </a>
+                </Link>
               </div>
               <QuestionCard />
             </div>

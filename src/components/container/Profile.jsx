@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../presentation/Header';
 import Footer from '../presentation/Footer';
 import TopQuestionCard from '../presentation/TopQuestionCard';
@@ -17,11 +18,11 @@ class Profile extends Component {
                   Create A Meetup
                   </button>
                 </a>
-                <a href='./meetups.html'>
+                <Link to='/meetups'>
                   <button>
                   View All Meetups
                   </button>
-                </a>
+                </Link>
                 <a href='./deletemeetup.html'>
                   <button>
                   Delete A Meetup

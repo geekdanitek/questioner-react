@@ -1,0 +1,16 @@
+.Meetups {
+    min-height: 100vh;
+    .meetups-area {
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    @media (max-width: 575.98px) {
+        .meetups-area {
+            width: 100%;
+        }
+    }
+    
+}

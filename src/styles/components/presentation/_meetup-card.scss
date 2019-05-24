@@ -1,0 +1,97 @@
+.meetups-card {
+        /*border: 1px solid rgba(0,0,0,.125);
+        border: 1px solid #81d4fa;*/
+        width: 100%;
+        height: 200px;
+        padding: 0 20px;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-clip: border-box;
+        transition-duration: 1s;
+        margin: 20px 0;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,0.11);
+}
+    
+    .meetups-card:first-child, .meetups-card:last-child {
+        margin: 0;
+    }
+    
+    .meetups-card:hover {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,0.30);
+    }
+    
+    .meetups-card-title {
+        margin: 15px 0  6px;
+        color: #343a40;
+        text-align: center;
+    }
+    
+    .meetups-card-questions {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.81);
+        margin-top: 9px;
+    }
+    
+    .meetups-card-button-area {
+         margin: 28px 0 0;
+    }
+    
+    .meetups-card-button-area >a button {
+        cursor: pointer;
+        padding: 9px 26px;
+        background-color: #29b6f6;
+        border: none;
+        transition-duration: 0.4s;
+        border-radius: 5px;
+        font-size: 20px;
+        color: #ffffff;
+        outline: none;
+    }
+    
+.meetups-card-button-area >a button img {
+            width: 20px;
+            height: 20px;
+}
+@media (max-width: 575.98px) {
+	.meetups-card {
+		height: auto;
+    	padding: 0 5px;
+	}
+
+	.meetups-card-title {
+	    margin: 10px 0 6px;
+	    font-size: 18px;
+	}
+	
+	.meetups-card-footer {
+		margin: 10px 0;
+	}
+
+	.meetups-card-questions {
+	    font-size: 13px;
+	    text-align: center;
+	} 
+
+	.meetups-card-button-area {
+	    text-align: center;
+	} 
+
+	.meetups-card-button-area >a button {
+		padding: 6px 14px;
+    	margin-right: 12px;
+	}
+
+	.delete-meetup-modal-content >button {
+		padding: 10px 41px;
+	}
+	.delete-meetup-modal-content {
+		width: 80%;
+		padding: 40px 0;
+		margin: 150px auto;
+	}
+}

@@ -12,6 +12,7 @@ import Profile from '../components/container/Profile';
 import Questions from '../components/container/Questions';
 import Question from '../components/container/Question';
 import AskQuestion from '../components/container/AskQuestion';
+import Meetups from '../components/container/Meetups';
 
 const Routes = () => (
   <Router>
@@ -20,6 +21,7 @@ const Routes = () => (
       <Route path='/signup' component={Signup} exact />
       <Route path='/home' component={LandingPage} exact />
       <Route path='/' component={Profile} exact />
+      <Route path='/meetups' component={Meetups} exact />
       <Route path='/questions' component={Questions} exact />
       <Route path='/question/:id' component={Question} exact />
       <Route path='/askquestion' component={AskQuestion} exact />

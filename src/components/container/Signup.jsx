@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
 import { signup } from '../../actions';
+import jsonFormatter from '../../utils/jsonFormat.utils';
 
 class Signup extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class Signup extends Component {
 
   handleSignup = async (e) => {
     e.preventDefault();
-    const { signupAction, auth } = this.props;
+    const { signupAction } = this.props;
     const {
       firstname,
       lastname,
@@ -47,17 +48,6 @@ class Signup extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
-  }
-
-  jsonFormatter = (value) => {
-    const condition1 = value.replace(/[{]/g, '');
-    const condition2 = condition1.replace(/[}]/g, '');
-    const condition3 = condition2.replace(/[:]/g, ': ');
-    const condition4 = condition3.replace(/[,]/g, '<br />');
-    const condition5 = condition4.replace(/[[]/g, '');
-    const condition6 = condition5.replace(/[\]]/g, '');
-    const final = condition6.replace(/["]/g, '');
-    return final;
   }
 
   render() {
@@ -88,7 +78,7 @@ class Signup extends Component {
                   auth && auth.error && auth.error.error && (
                   <div
                     className='error-section'
-                    dangerouslySetInnerHTML={{ __html: this.jsonFormatter(JSON.stringify(auth.error.error)) }}
+                    dangerouslySetInnerHTML={{ __html: jsonFormatter(JSON.stringify(auth.error.error)) }}
                   />
                   )
                 }

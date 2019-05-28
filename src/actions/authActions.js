@@ -1,6 +1,13 @@
 import axios from '../config/axiosConfig';
 
-import { SIGNUP_BEGIN, SIGNUP_SUCCESS, SIGNUP_FAILURE } from '../action-types';
+import {
+  SIGNUP_BEGIN,
+  SIGNUP_SUCCESS,
+  SIGNUP_FAILURE,
+  LOGIN_BEGIN,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE
+} from '../action-types';
 
 const loadingSignupHandler = () => ({
   type: SIGNUP_BEGIN
@@ -16,6 +23,20 @@ const signupFailureHandler = (payload = {}) => ({
   payload
 });
 
+const loadingLoginHandler = () => ({
+  type: LOGIN_BEGIN
+});
+
+const loginSuccessHandler = (payload = {}) => ({
+  type: LOGIN_SUCCESS,
+  payload
+});
+
+const loginFailureHandler = (payload = {}) => ({
+  type: LOGIN_FAILURE,
+  payload
+});
+
 const signup = payload => async (dispatch) => {
   try {
     dispatch(loadingSignupHandler());
@@ -27,9 +48,21 @@ const signup = payload => async (dispatch) => {
   }
 };
 
+const login = payload => async (dispatch) => {
+  try {
+    dispatch(loadingLoginHandler());
+    const response = await axios.post('/auth/login', payload);
+    dispatch(loginSuccessHandler(response.data.data));
+    return window.location.replace('/');
+  } catch (error) {
+    return dispatch(loginFailureHandler(error.response.data));
+  }
+};
+
 export {
   loadingSignupHandler,
   signupSuccessHandler,
   signupFailureHandler,
-  signup
+  signup,
+  login
 };

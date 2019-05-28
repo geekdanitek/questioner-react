@@ -1,7 +1,10 @@
 import {
   SIGNUP_BEGIN,
   SIGNUP_SUCCESS,
-  SIGNUP_FAILURE
+  SIGNUP_FAILURE,
+  LOGIN_BEGIN,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE
 } from '../action-types';
 
 const initialState = {
@@ -26,6 +29,26 @@ const authReducers = (state = initialState, action) => {
         isLoading: false
       };
     case SIGNUP_FAILURE:
+      return {
+        ...state,
+        error: action.payload,
+        isLoading: false
+      };
+    case LOGIN_BEGIN:
+      return {
+        ...state,
+        user: {},
+        error: {},
+        isLoading: true
+      };
+    case LOGIN_SUCCESS:
+      return {
+        ...state,
+        user: action.payload,
+        error: {},
+        isLoading: false
+      };
+    case LOGIN_FAILURE:
       return {
         ...state,
         error: action.payload,

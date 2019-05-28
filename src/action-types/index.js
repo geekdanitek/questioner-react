@@ -1,9 +1,19 @@
 import authActionTypes from './authActionTypes';
 
-const { SIGNUP_BEGIN, SIGNUP_SUCCESS, SIGNUP_FAILURE } = authActionTypes;
+const {
+  SIGNUP_BEGIN,
+  SIGNUP_SUCCESS,
+  SIGNUP_FAILURE,
+  LOGIN_BEGIN,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE
+} = authActionTypes;
 
 export {
   SIGNUP_BEGIN,
   SIGNUP_SUCCESS,
-  SIGNUP_FAILURE
+  SIGNUP_FAILURE,
+  LOGIN_BEGIN,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE
 };

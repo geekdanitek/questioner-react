@@ -1,9 +1,11 @@
 import {
   signup,
-  signupSuccessHandler
+  signupSuccessHandler,
+  login
 } from './authActions';
 
 export {
   signup,
-  signupSuccessHandler
+  signupSuccessHandler,
+  login
 };

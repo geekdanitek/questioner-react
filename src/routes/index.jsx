@@ -14,6 +14,7 @@ import Question from '../components/container/Question';
 import AskQuestion from '../components/container/AskQuestion';
 import Meetups from '../components/container/Meetups';
 import CreateMeetup from '../components/container/CreateMeetup';
+import AuthWrapper from '../components/presentation/AuthWrapper';
 
 const Routes = () => (
   <Router>
@@ -22,11 +23,31 @@ const Routes = () => (
       <Route path='/signup' component={Signup} exact />
       <Route path='/home' component={LandingPage} exact />
       <Route path='/' component={Profile} exact />
-      <Route path='/meetups' component={Meetups} exact />
-      <Route path='/meetup/create' component={CreateMeetup} exact />
-      <Route path='/questions' component={Questions} exact />
-      <Route path='/question/:id' component={Question} exact />
-      <Route path='/askquestion' component={AskQuestion} exact />
+      <Route
+        path='/meetups'
+        component={() => <AuthWrapper><Meetups /></AuthWrapper>}
+        exact
+      />
+      <Route
+        path='/meetup/create'
+        component={() => <AuthWrapper><CreateMeetup /></AuthWrapper>}
+        exact
+      />
+      <Route
+        path='/questions'
+        component={() => <AuthWrapper><Questions /></AuthWrapper>}
+        exact
+      />
+      <Route
+        path='/question/:id'
+        component={() => <AuthWrapper><Question /></AuthWrapper>}
+        exact
+      />
+      <Route
+        path='/askquestion'
+        component={() => <AuthWrapper><AskQuestion /></AuthWrapper>}
+        exact
+      />
       <Route component={NotFound} />
     </Switch>
   </Router>

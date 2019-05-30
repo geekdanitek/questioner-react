@@ -41,6 +41,7 @@ const signup = payload => async (dispatch) => {
   try {
     dispatch(loadingSignupHandler());
     const response = await axios.post('/auth/signup', payload);
+    localStorage.setItem('token', response.data.data[0].token);
     dispatch(signupSuccessHandler(response.data.data));
     return window.location.replace('/');
   } catch (error) {
@@ -52,6 +53,7 @@ const login = payload => async (dispatch) => {
   try {
     dispatch(loadingLoginHandler());
     const response = await axios.post('/auth/login', payload);
+    localStorage.setItem('token', response.data.data[0].token);
     dispatch(loginSuccessHandler(response.data.data));
     return window.location.replace('/');
   } catch (error) {

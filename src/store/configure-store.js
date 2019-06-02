@@ -32,7 +32,7 @@ const Store = () => {
 
   store.subscribe(() => {
     saveToLocalStorage({
-      auth: store.getState().auth
+      auth: store.getState().auth.user
     });
   });
 

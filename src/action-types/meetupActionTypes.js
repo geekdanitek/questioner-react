@@ -1,0 +1,6 @@
+const meetupActionTypes = {
+  GET_MEETUPS_BEGIN: 'GET_MEETUPS_BEGIN',
+  GET_MEETUPS_SUCCESS: 'GET_MEETUPS_SUCCESS',
+  GET_MEETUPS_FAILURE: 'GET_MEETUPS_FAILURE'
+};
+export default meetupActionTypes;

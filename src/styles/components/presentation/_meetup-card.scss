@@ -17,7 +17,7 @@
         box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,0.11);
 }
     
-    .meetups-card:first-child, .meetups-card:last-child {
+    .meetups-card:first-child {
         margin: 0;
     }
     
@@ -28,7 +28,8 @@
     .meetups-card-title {
         margin: 15px 0  6px;
         color: #343a40;
-        text-align: center;
+        text-align: left;
+        font-size: 25px;
     }
     
     .meetups-card-questions {
@@ -52,10 +53,18 @@
         color: #ffffff;
         outline: none;
     }
+
+    .meetups-card-button-area span {
+        float: right;
+        margin-top: 18px;
+    }
     
 .meetups-card-button-area >a button img {
             width: 20px;
             height: 20px;
+}
+.meetup-card-footer-area {
+    text-align: right;
 }
 @media (max-width: 575.98px) {
 	.meetups-card {
@@ -65,7 +74,8 @@
 
 	.meetups-card-title {
 	    margin: 10px 0 6px;
-	    font-size: 18px;
+        font-size: 18px;
+        text-align: center;
 	}
 	
 	.meetups-card-footer {
@@ -85,7 +95,10 @@
 		padding: 6px 14px;
     	margin-right: 12px;
 	}
-
+    .meetup-card-footer-area{
+        text-align: center;
+        margin: 15px 0;
+    }
 	.delete-meetup-modal-content >button {
 		padding: 10px 41px;
 	}

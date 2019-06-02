@@ -1,0 +1,17 @@
+.FullPageLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 5000;
+    left: 0;
+    top: 0;
+    opacity: 1;
+
+    span{
+        color: $primary-color;
+    }
+}

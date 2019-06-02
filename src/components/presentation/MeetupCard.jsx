@@ -2,37 +2,51 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import deleteIcon from '../../assets/images/delete_white_192x192.png';
 
-const MeetupCard = () => (
+const MeetupCard = ({
+  topic,
+  happeningon,
+  createdon,
+  location,
+  id
+}) => (
   <Fragment>
     <div className='meetups-card'>
       <h2 className='meetups-card-title'>
-            NIGERIA MODERN EXCEL & POWER BI USER GROUP
+        { topic }
       </h2>
       <span className='meetups-card-questions'>
         <span>
-                    13 questions asked,
+            Happening on:
           {' '}
-          <b>12th, Dec 2018</b>
+          <b>{ happeningon }</b>
+        </span>
+        <br />
+        <span>
+            Created at:
+          {' '}
+          <b>{ createdon }</b>
         </span>
       </span>
-      <div className='meetups-card-button-area'>
-        <Link to='/questions'>
-          <button>
-                    Questions
-          </button>
-        </Link>
-        <a href='/'>
-          <button id='deleteMeetupButton'>
-            <img
-              className='meetups-card-delete'
-              src={deleteIcon}
-              alt='delete_icon'
-            />
-          </button>
-        </a>
-      </div>
-      <div className='meetups-card-footer'>
-        <small>The Conoil group</small>
+      <div>
+        <div className='meetups-card-button-area'>
+          <Link to={`/meetups/${id}/questions`}>
+            <button>
+            Questions
+            </button>
+          </Link>
+          <a href='/'>
+            <button id='deleteMeetupButton'>
+              <img
+                className='meetups-card-delete'
+                src={deleteIcon}
+                alt='delete_icon'
+              />
+            </button>
+          </a>
+        </div>
+        <div className='meetup-card-footer-area'>
+          <span>{location}</span>
+        </div>
       </div>
     </div>
   </Fragment>

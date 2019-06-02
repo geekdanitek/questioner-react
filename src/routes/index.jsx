@@ -22,7 +22,11 @@ const Routes = () => (
       <Route path='/login' component={Login} exact />
       <Route path='/signup' component={Signup} exact />
       <Route path='/home' component={LandingPage} exact />
-      <Route path='/' component={Profile} exact />
+      <Route
+        path='/'
+        component={() => <AuthWrapper><Profile /></AuthWrapper>}
+        exact
+      />
       <Route
         path='/meetups'
         component={() => <AuthWrapper><Meetups /></AuthWrapper>}
@@ -34,7 +38,7 @@ const Routes = () => (
         exact
       />
       <Route
-        path='/questions'
+        path='/meetups/:id/questions'
         component={() => <AuthWrapper><Questions /></AuthWrapper>}
         exact
       />

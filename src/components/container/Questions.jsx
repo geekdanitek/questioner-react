@@ -1,31 +1,62 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Header from '../presentation/Header';
 import Footer from '../presentation/Footer';
 import QuestionCard from '../presentation/QuestionCard';
+import { getMeetup } from '../../actions';
+import FullPageLoader from '../presentation/FullPageLoader';
 
 class Questions extends Component {
+  async componentDidMount() {
+    const { getMeetupAction, match } = this.props;
+    await getMeetupAction(match.params.id);
+  }
+
   render() {
+    const { meetup } = this.props;
     return (
       <Fragment>
         <Header />
+        { meetup && meetup.isLoading && <FullPageLoader /> }
         <div className='Questions'>
           <div className='questions-area'>
-            <div className='container'>
-              <div className='meetup-title-area'>
-                <div className='meetup-title'>
-                    NIGERIA MODERN EXCEL & POWER BI USER GROUP
+            {
+              meetup && meetup.meetup[0] && (
+                <div className='container'>
+                  <div className='meetup-title-area'>
+                    <div className='meetup-title'>
+                      { meetup.meetup[0].meetup.topic }
+                    </div>
+                  </div>
+                  <div className='ask-question-button-area'>
+                    <Link
+                      to={`/meetups/${meetup.meetup[0].meetup.id}/askquestion`}
+                    >
+                      <button>
+                      Ask A Question
+                      </button>
+                    </Link>
+                  </div>
+                  { meetup.meetup[0].questions.length > 0
+                    ? meetup.meetup[0].questions.map(question => (
+                      <QuestionCard
+                        key={question.id}
+                        createdon={question.createdon}
+                        createdby={question.createdby}
+                        votes={question.votes}
+                        title={question.title}
+                        body={question.body}
+                        meetupid={question.meetupid}
+                        id={question.id}
+                      />
+                    ))
+                    : (<div className='no-questions'>No questions in this meetup</div>)
+                }
+
                 </div>
-              </div>
-              <div className='ask-question-button-area'>
-                <Link to='/askquestion'>
-                  <button>
-                    Ask A Question
-                  </button>
-                </Link>
-              </div>
-              <QuestionCard />
-            </div>
+              )
+            }
           </div>
         </div>
         <Footer />
@@ -33,5 +64,9 @@ class Questions extends Component {
     );
   }
 }
+const mapStateToProps = ({ meetup }) => ({ meetup });
 
-export default Questions;
+const mapDispatchToProps = {
+  getMeetupAction: id => getMeetup(id)
+};
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Questions));

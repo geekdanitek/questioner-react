@@ -4,11 +4,12 @@ import {
   login
 } from './authActions';
 
-import { getMeetups } from './meetupActions';
+import { getMeetups, getMeetup } from './meetupActions';
 
 export {
   signup,
   signupSuccessHandler,
   login,
-  getMeetups
+  getMeetups,
+  getMeetup
 };

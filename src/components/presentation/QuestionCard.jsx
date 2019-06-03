@@ -13,13 +13,7 @@ const QuestionCard = ({
   <Fragment>
     <div className='questions-card'>
       <div className='section'>
-        <div className='section-left'>
-          <div className='vote'>
-            <button className='vote-up' />
-            <span>{votes}</span>
-            <button className='vote-down' />
-          </div>
-        </div>
+        <div className='section-left' />
         <div className='section-right'>
           <h3 className='questions-card-title'>
             {title}

@@ -34,15 +34,6 @@ const MeetupCard = ({
             Questions
             </button>
           </Link>
-          <a href='/'>
-            <button id='deleteMeetupButton'>
-              <img
-                className='meetups-card-delete'
-                src={deleteIcon}
-                alt='delete_icon'
-              />
-            </button>
-          </a>
         </div>
         <div className='meetup-card-footer-area'>
           <span>{location}</span>

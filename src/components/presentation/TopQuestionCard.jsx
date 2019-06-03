@@ -12,17 +12,6 @@ const TopQuestionCard = () => (
                 NIGERIA MODERN EXCEL & POWER BI USER GROUP
             </div>
             <div className='top-question-feed-body'>
-              <div className='left'>
-                <div className='vote'>
-                  <div>
-                    <img
-                      src={vote}
-                      alt='vote'
-                    />
-                  </div>
-                  <span>2423</span>
-                </div>
-              </div>
               <div className='right'>
                 <h3 className='top-question-feed-card-title'>
                         What is the purpose of this meetup like seriously i dont understand.

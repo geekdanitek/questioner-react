@@ -50,7 +50,9 @@
         font-size: 12px;
         color: rgba(0, 0, 0, 0.81);
     }
-    
+    .question-card-description {
+        min-height: 130px;
+    }
     .question-card-description p {
         color: #343a40;
         font-size: 17px;
@@ -64,7 +66,7 @@
     }
     
     .question-card-comment-area {
-        margin: 10px 0 0;
+        margin: 10px 0 10px;
     }
     
     .question-card-input-section >textarea {
@@ -161,6 +163,24 @@
         border: none;
     }
     
+    .load-comment-area {
+        // margin-left: 10px;
+        margin: 10px 0;
+    }
+
+    .load-comment-area > button {
+        cursor: pointer;
+        padding: 8px 28px;
+        background-color: #29b6f6;
+        border: none;
+        transition-duration: 0.4s;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+    .comment-spinner {
+        text-align: center;
+        color: $primary-color;
+    }
     @media (max-width: 575.98px) { 
         .meetup-title-area { 
             width: 100%;
@@ -181,6 +201,9 @@
         }
         .question-card-button-area {
             text-align: left;
+        }
+        .question-card-description {
+            min-height: 50px;
         }
     }
 }

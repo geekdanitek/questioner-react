@@ -1,5 +1,7 @@
 import authActionTypes from './authActionTypes';
 import meetActionTypes from './meetupActionTypes';
+import questionActionTypes from './questionActionTypes';
+import commentActionTypes from './commentActionTypes';
 
 const {
   SIGNUP_BEGIN,
@@ -19,6 +21,21 @@ const {
   GET_MEETUP_FAILURE
 } = meetActionTypes;
 
+const {
+  GET_QUESTION_BEGIN,
+  GET_QUESTION_SUCCESS,
+  GET_QUESTION_FAILURE
+} = questionActionTypes;
+
+const {
+  GET_COMMENTS_BEGIN,
+  GET_COMMENTS_SUCCESS,
+  GET_COMMENTS_FAILURE,
+  CREATE_COMMENT_BEGIN,
+  CREATE_COMMENT_SUCCESS,
+  CREATE_COMMENT_FAILURE,
+} = commentActionTypes;
+
 export {
   SIGNUP_BEGIN,
   SIGNUP_SUCCESS,
@@ -31,5 +48,14 @@ export {
   GET_MEETUPS_FAILURE,
   GET_MEETUP_BEGIN,
   GET_MEETUP_SUCCESS,
-  GET_MEETUP_FAILURE
+  GET_MEETUP_FAILURE,
+  GET_QUESTION_BEGIN,
+  GET_QUESTION_SUCCESS,
+  GET_QUESTION_FAILURE,
+  GET_COMMENTS_BEGIN,
+  GET_COMMENTS_SUCCESS,
+  GET_COMMENTS_FAILURE,
+  CREATE_COMMENT_BEGIN,
+  CREATE_COMMENT_SUCCESS,
+  CREATE_COMMENT_FAILURE,
 };

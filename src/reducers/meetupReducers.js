@@ -1,13 +1,17 @@
 import {
   GET_MEETUPS_BEGIN,
   GET_MEETUPS_SUCCESS,
-  GET_MEETUPS_FAILURE
+  GET_MEETUPS_FAILURE,
+  GET_MEETUP_BEGIN,
+  GET_MEETUP_SUCCESS,
+  GET_MEETUP_FAILURE
 } from '../action-types';
 
 const initialState = {
   meetupError: {},
   isLoading: false,
-  meetups: []
+  meetups: [],
+  meetup: []
 };
 
 const meetupReducers = (state = initialState, action) => {
@@ -26,6 +30,25 @@ const meetupReducers = (state = initialState, action) => {
         isLoading: false
       };
     case GET_MEETUPS_FAILURE:
+      return {
+        ...initialState,
+        meetupError: action.payload,
+        isLoading: false
+      };
+    case GET_MEETUP_BEGIN:
+      return {
+        ...initialState,
+        meetupError: {},
+        isLoading: true,
+        meetup: []
+      };
+    case GET_MEETUP_SUCCESS:
+      return {
+        ...initialState,
+        meetup: action.payload,
+        isLoading: false
+      };
+    case GET_MEETUP_FAILURE:
       return {
         ...initialState,
         meetupError: action.payload,

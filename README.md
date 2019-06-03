@@ -1,2 +1,2 @@
-[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
+[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)[![Test Coverage](https://api.codeclimate.com/v1/badges/8fb2943f31dfff143a9c/test_coverage)](https://codeclimate.com/github/geekdanitek/questioner-react/test_coverage)
 # questioner-react

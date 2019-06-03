@@ -6,3 +6,6 @@ webpack.config.js
 .eslintrc
 server.js
 dist
+.circleci
+jest.config.js
+enzyme.config.js

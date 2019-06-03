@@ -23,11 +23,6 @@ class Profile extends Component {
                   View All Meetups
                   </button>
                 </Link>
-                <a href='./deletemeetup.html'>
-                  <button>
-                  Delete A Meetup
-                  </button>
-                </a>
               </div>
               <div className='user-profile-question-post'>
                 <div className='user-profile-card'>

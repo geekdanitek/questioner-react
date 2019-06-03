@@ -38,17 +38,17 @@ const Routes = () => (
         exact
       />
       <Route
-        path='/meetups/:id/questions'
+        path='/meetups/:meetupId/questions'
         component={() => <AuthWrapper><Questions /></AuthWrapper>}
         exact
       />
       <Route
-        path='/meetups/:id/question/:id'
+        path='/meetups/:meetupId/question/:questionId'
         component={() => <AuthWrapper><Question /></AuthWrapper>}
         exact
       />
       <Route
-        path='/meetups/:id/askquestion'
+        path='/meetups/:meetupId/askquestion'
         component={() => <AuthWrapper><AskQuestion /></AuthWrapper>}
         exact
       />

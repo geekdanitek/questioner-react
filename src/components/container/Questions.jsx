@@ -10,7 +10,7 @@ import FullPageLoader from '../presentation/FullPageLoader';
 class Questions extends Component {
   async componentDidMount() {
     const { getMeetupAction, match } = this.props;
-    await getMeetupAction(match.params.id);
+    await getMeetupAction(match.params.meetupId);
   }
 
   render() {

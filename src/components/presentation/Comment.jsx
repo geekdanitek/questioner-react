@@ -1,15 +1,23 @@
 import React, { Fragment } from 'react';
 
-const Comment = () => (
+const Comment = ({
+  comment, createdon, firstname, lastname
+}) => (
   <Fragment>
     <div className='Comment'>
       <div className='comment-area'>
         <div className='who-commented'>
-          <h4>Daniel Adedeji</h4>
-          <small>10:30am, 20th Dec 2018</small>
+          <h4>
+            {firstname}
+            {' '}
+            {lastname}
+          </h4>
+          <small>
+            {createdon}
+          </small>
         </div>
         <div className='comment-details'>
-            I thought the meetup was fake until i saw the reviews
+          {comment}
         </div>
       </div>
     </div>

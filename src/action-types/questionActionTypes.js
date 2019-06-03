@@ -1,0 +1,6 @@
+const questionActionTypes = {
+  GET_QUESTION_BEGIN: 'GET_QUESTION_BEGIN',
+  GET_QUESTION_SUCCESS: 'GET_QUESTION_SUCCESS',
+  GET_QUESTION_FAILURE: 'GET_QUESTION_FAILURE'
+};
+export default questionActionTypes;

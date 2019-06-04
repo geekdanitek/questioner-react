@@ -58,4 +58,4 @@ const meetupReducers = (state = initialState, action) => {
       return state;
   }
 };
-export default meetupReducers;
+export { meetupReducers, initialState };

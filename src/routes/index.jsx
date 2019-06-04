@@ -6,21 +6,21 @@ import {
 } from 'react-router-dom';
 import LandingPage from '../components/container/Landing';
 import NotFound from '../components/container/NotFound';
-import Login from '../components/container/Login';
-import Signup from '../components/container/Signup';
+import { LoginComponent } from '../components/container/Login';
+import { SignupComponent } from '../components/container/Signup';
 import Profile from '../components/container/Profile';
-import Questions from '../components/container/Questions';
-import Question from '../components/container/Question';
+import { QuestionsComponent } from '../components/container/Questions';
+import { QuestionComponent } from '../components/container/Question';
 import AskQuestion from '../components/container/AskQuestion';
-import Meetups from '../components/container/Meetups';
+import { MeetupsComponent } from '../components/container/Meetups';
 import CreateMeetup from '../components/container/CreateMeetup';
 import AuthWrapper from '../components/presentation/AuthWrapper';
 
 const Routes = () => (
   <Router>
     <Switch>
-      <Route path='/login' component={Login} exact />
-      <Route path='/signup' component={Signup} exact />
+      <Route path='/login' component={LoginComponent} exact />
+      <Route path='/signup' component={SignupComponent} exact />
       <Route path='/home' component={LandingPage} exact />
       <Route
         path='/'
@@ -29,7 +29,7 @@ const Routes = () => (
       />
       <Route
         path='/meetups'
-        component={() => <AuthWrapper><Meetups /></AuthWrapper>}
+        component={() => <AuthWrapper><MeetupsComponent /></AuthWrapper>}
         exact
       />
       <Route
@@ -39,12 +39,12 @@ const Routes = () => (
       />
       <Route
         path='/meetups/:meetupId/questions'
-        component={() => <AuthWrapper><Questions /></AuthWrapper>}
+        component={() => <AuthWrapper><QuestionsComponent /></AuthWrapper>}
         exact
       />
       <Route
         path='/meetups/:meetupId/question/:questionId'
-        component={() => <AuthWrapper><Question /></AuthWrapper>}
+        component={() => <AuthWrapper><QuestionComponent /></AuthWrapper>}
         exact
       />
       <Route

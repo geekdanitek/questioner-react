@@ -7,7 +7,7 @@ import QuestionCard from '../presentation/QuestionCard';
 import { getMeetup } from '../../actions';
 import FullPageLoader from '../presentation/FullPageLoader';
 
-class Questions extends Component {
+export class Questions extends Component {
   async componentDidMount() {
     const { getMeetupAction, match } = this.props;
     await getMeetupAction(match.params.meetupId);
@@ -69,4 +69,4 @@ const mapStateToProps = ({ meetup }) => ({ meetup });
 const mapDispatchToProps = {
   getMeetupAction: id => getMeetup(id)
 };
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Questions));
+export const QuestionsComponent = connect(mapStateToProps, mapDispatchToProps)(withRouter(Questions));

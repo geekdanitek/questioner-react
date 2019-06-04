@@ -36,4 +36,4 @@ const questionReducers = (state = initialState, action) => {
   }
 };
 
-export default questionReducers;
+export { questionReducers, initialState };

@@ -41,7 +41,7 @@
     
     }
     
-    .landing-content-area >a button {
+    .landing-content-area >a {
         cursor: pointer;
         padding: 14px 50px;
         background-color: #29b6f6;
@@ -51,9 +51,10 @@
         color: #ffffff;
         font-size: 20px;
         outline: none;
+        text-decoration: none;
     }
     
-    .landing-content-area >a button:hover {
+    .landing-content-area >a:hover  {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
     }
     
@@ -115,4 +116,30 @@
     .landing-signup-area >a button:hover {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
     }
+    @media (max-width: 575.98px) { 
+	.landing-content-area {
+		padding: 100px 0 0;
+	}
+
+	.landing-how-it-works {
+		height: auto; 
+		display: inline-table;
+	}
+	.landing-how-it-works-icons {
+		width: 100%;
+		float: left;
+		padding: 28px;
+	}
+	.landing-signup-area {
+		height: auto;
+		padding: 15px 10px;
+	}
+	.landing-signup-area >span { 
+		margin: 0;
+		padding-top: 10px;
+	}
+	.landing-signup-area >a button { 
+		margin: 25px 0;
+	}
+}
 }

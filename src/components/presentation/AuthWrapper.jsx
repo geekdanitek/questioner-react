@@ -11,7 +11,7 @@ class AuthWrapper extends Component {
     const { history } = this.props;
     const token = get('token');
     if (!token) {
-      return history.push('/login');
+      return history.push('/home');
     }
   };
 

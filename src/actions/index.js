@@ -7,6 +7,8 @@ import {
   loadingLoginHandler,
   loginSuccessHandler,
   loginFailureHandler,
+  logoutSuccess,
+  logout
 } from './authActions';
 
 import {
@@ -17,7 +19,7 @@ import {
   meetupsFailureHandler,
   loadingMeetupHandler,
   meetupSuccessHandler,
-  meetupFailureHandler
+  meetupFailureHandler,
 } from './meetupActions';
 import {
   loadingQuestionHandler,
@@ -72,5 +74,7 @@ export {
   loadingAskQuestionHandler,
   askQuestionSuccessHandler,
   askQuestionFailureHandler,
-  askQuestion
+  askQuestion,
+  logoutSuccess,
+  logout
 };

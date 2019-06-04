@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import Header from '../presentation/Header';
+import { HeaderComponent } from '../presentation/Header';
 import Footer from '../presentation/Footer';
 import { askQuestion } from '../../actions';
 
@@ -44,7 +44,7 @@ export class AskQuestion extends Component {
     const { question } = this.props;
     return (
       <Fragment>
-        <Header />
+        <HeaderComponent />
         <div className='AskQuestion'>
           <div className='ask-question-area'>
             <div className='container'>

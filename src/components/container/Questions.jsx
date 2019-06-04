@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Header from '../presentation/Header';
+import { HeaderComponent } from '../presentation/Header';
 import Footer from '../presentation/Footer';
 import QuestionCard from '../presentation/QuestionCard';
 import { getMeetup } from '../../actions';
@@ -17,7 +17,7 @@ export class Questions extends Component {
     const { meetup } = this.props;
     return (
       <Fragment>
-        <Header />
+        <HeaderComponent />
         { meetup && meetup.isLoading && <FullPageLoader /> }
         <div className='Questions'>
           <div className='questions-area'>

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import Header from '../presentation/Header';
+import { HeaderComponent } from '../presentation/Header';
 import Footer from '../presentation/Footer';
 import Comment from '../presentation/Comment';
 import { getQuestion, getComments, createComment } from '../../actions';
@@ -61,7 +61,7 @@ export class Question extends Component {
     const { showComment, comment: commentText } = this.state;
     return (
       <Fragment>
-        <Header />
+        <HeaderComponent />
         { question && question.isLoading && (<FullPageLoader />) }
         <div className='Question'>
           <div className='question-area'>

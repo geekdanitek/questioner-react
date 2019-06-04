@@ -6,6 +6,7 @@ import {
   LOGIN_BEGIN,
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
+  LOGOUT
 } from '../../action-types';
 
 describe('Auth reducers', () => {
@@ -73,6 +74,15 @@ describe('Auth reducers', () => {
     })).toEqual({
       ...initialState,
       error: [{ error: 'fail' }],
+      isLoading: false
+    });
+  });
+  test('should handle LOGOUT action', () => {
+    expect(authReducers(initialState, {
+      type: LOGOUT,
+    })).toEqual({
+      ...initialState,
+      user: {},
       isLoading: false
     });
   });

@@ -66,5 +66,8 @@ export {
   signupSuccessHandler,
   signupFailureHandler,
   signup,
+  loadingLoginHandler,
+  loginSuccessHandler,
+  loginFailureHandler,
   login
 };

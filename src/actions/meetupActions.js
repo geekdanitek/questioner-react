@@ -36,12 +36,12 @@ const loadingMeetupHandler = () => ({
   type: GET_MEETUP_BEGIN
 });
 
-const meetupSuccessHandler = payload => ({
+const meetupSuccessHandler = (payload = []) => ({
   type: GET_MEETUP_SUCCESS,
   payload
 });
 
-const meetupFailureHandler = payload => ({
+const meetupFailureHandler = (payload = {}) => ({
   type: GET_MEETUP_FAILURE,
   payload
 });

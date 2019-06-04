@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { login } from '../../actions';
 import jsonFormatter from '../../utils/jsonFormat.utils';
 
-class Login extends Component {
+export class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -102,4 +102,4 @@ const mapDispatchToProps = {
   loginAction: payload => login(payload)
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export const LoginComponent = connect(mapStateToProps, mapDispatchToProps)(Login);

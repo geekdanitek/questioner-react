@@ -59,4 +59,4 @@ const authReducers = (state = initialState, action) => {
   }
 };
 
-export default authReducers;
+export { authReducers, initialState };

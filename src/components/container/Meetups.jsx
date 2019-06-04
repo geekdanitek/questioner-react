@@ -6,7 +6,7 @@ import MeetupCard from '../presentation/MeetupCard';
 import { getMeetups } from '../../actions';
 import FullPageLoader from '../presentation/FullPageLoader';
 
-class Meetups extends Component {
+export class Meetups extends Component {
   async componentDidMount() {
     const { getMeetupsAction } = this.props;
     await getMeetupsAction();
@@ -47,4 +47,4 @@ const mapStateToProps = ({ meetup }) => ({ meetup });
 const mapDispatchToProps = {
   getMeetupsAction: () => getMeetups()
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Meetups);
+export const MeetupsComponent = connect(mapStateToProps, mapDispatchToProps)(Meetups);

@@ -59,4 +59,4 @@ const commentReducers = (state = initialState, action) => {
   }
 };
 
-export default commentReducers;
+export { commentReducers, initialState };

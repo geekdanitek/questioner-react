@@ -9,7 +9,7 @@ import Comment from '../presentation/Comment';
 import { getQuestion, getComments, createComment } from '../../actions';
 import FullPageLoader from '../presentation/FullPageLoader';
 
-class Question extends Component {
+export class Question extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -161,4 +161,4 @@ const mapDispatchToProps = {
   createCommentAction: payload => createComment(payload)
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Question));
+export const QuestionComponent = connect(mapStateToProps, mapDispatchToProps)(withRouter(Question));

@@ -1,0 +1,31 @@
+.not-found {
+    min-height: 100vh;
+    .not-found-area {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: 100px auto;
+
+        img {
+            width: 100%;
+        }
+    }
+    .redirect {
+        text-align: center;
+        a {
+            cursor: pointer;
+            padding: 8px 25px;
+            background-color: #29b6f6;
+            border: none;
+            transition-duration: 0.4s;
+            border-radius: 5px;
+            color: #ffffff;
+            transition-duration: 0.4s;
+            font-size: 15px;
+            text-decoration: none;
+            :hover {
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+            }
+        }  
+    }
+}

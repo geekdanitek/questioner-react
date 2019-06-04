@@ -9,6 +9,7 @@ import {
   LOGIN_BEGIN,
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
+  LOGOUT
 } from '../../action-types';
 
 import {
@@ -19,7 +20,9 @@ import {
   loadingLoginHandler,
   loginSuccessHandler,
   loginFailureHandler,
-  login
+  login,
+  logoutSuccess,
+  logout
 } from '../../actions';
 
 describe('Auth action', () => {
@@ -84,6 +87,13 @@ describe('Auth action', () => {
       payload: {}
     });
   });
+
+  test('should setup logout success handler', () => {
+    expect(logoutSuccess()).toEqual({
+      type: LOGOUT
+    });
+  });
+
   test('should signup user', () => {
     const store = mockStore({ user: [] });
     axiosInstance.post = jest.fn().mockReturnValue(Promise.resolve({ data: { data: [{ user: 'Daniel' }] } }));
@@ -124,6 +134,15 @@ describe('Auth action', () => {
       .then(() => {
         expect(store.getActions()[0].type).toEqual(expectedActions[0]);
         expect(store.getActions()[1].type).toEqual(expectedActions[1]);
+      });
+  });
+
+  test('should logout user', () => {
+    const store = mockStore({ user: [] });
+    const expectedActions = [LOGOUT];
+    return store.dispatch(logout())
+      .then(() => {
+        expect(store.getActions()[0].type).toEqual(expectedActions[0]);
       });
   });
 });

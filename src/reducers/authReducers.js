@@ -4,7 +4,8 @@ import {
   SIGNUP_FAILURE,
   LOGIN_BEGIN,
   LOGIN_SUCCESS,
-  LOGIN_FAILURE
+  LOGIN_FAILURE,
+  LOGOUT
 } from '../action-types';
 
 const initialState = {
@@ -53,6 +54,12 @@ const authReducers = (state = initialState, action) => {
         ...state,
         error: action.payload,
         isLoading: false
+      };
+    case LOGOUT:
+      return {
+        ...state,
+        isLoading: false,
+        user: {}
       };
     default:
       return state;

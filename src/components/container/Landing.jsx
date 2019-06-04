@@ -2,14 +2,14 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/question-mark-2-xxl.png';
 import Button from '../presentation/Button';
-import Header from '../presentation/Header';
+import { HeaderComponent } from '../presentation/Header';
 import Footer from '../presentation/Footer';
 
 class LandingPage extends Component {
   render() {
     return (
       <Fragment>
-        <Header />
+        <HeaderComponent />
         <div className='LandingPage'>
           <div className='landing-area'>
             <div className='landing-background'>

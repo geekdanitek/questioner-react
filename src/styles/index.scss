@@ -14,7 +14,8 @@
 @import "./components/container/meetups.scss";
 @import "./components/presentation/meetup-card.scss";
 @import "./components/container/create-meetup.scss";
-@import "./components/presentation/full-page-loader";
+@import "./components/presentation/full-page-loader.scss";
+@import "./components/container/not-found.scss";
 
 * {
     font-family: 'Lato';

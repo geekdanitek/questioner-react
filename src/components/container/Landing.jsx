@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/question-mark-2-xxl.png';
 import Button from '../presentation/Button';
 import Header from '../presentation/Header';
@@ -23,14 +24,9 @@ class LandingPage extends Component {
                   <h3 className='landing-content-description'>
                         Questioner helps the meetup organizer prioritize questions to be answered
                   </h3>
-                  <a href='./signup.html'>
-                    <Button
-                      type='button'
-                      id='signup'
-                    >
+                  <Link to='signup'>
                       Sign Up
-                    </Button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -11,7 +11,7 @@ import { SignupComponent } from '../components/container/Signup';
 import Profile from '../components/container/Profile';
 import { QuestionsComponent } from '../components/container/Questions';
 import { QuestionComponent } from '../components/container/Question';
-import AskQuestion from '../components/container/AskQuestion';
+import { AskQuestionComponent } from '../components/container/AskQuestion';
 import { MeetupsComponent } from '../components/container/Meetups';
 import CreateMeetup from '../components/container/CreateMeetup';
 import AuthWrapper from '../components/presentation/AuthWrapper';
@@ -49,7 +49,7 @@ const Routes = () => (
       />
       <Route
         path='/meetups/:meetupId/askquestion'
-        component={() => <AuthWrapper><AskQuestion /></AuthWrapper>}
+        component={() => <AuthWrapper><AskQuestionComponent /></AuthWrapper>}
         exact
       />
       <Route component={NotFound} />

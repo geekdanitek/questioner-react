@@ -23,7 +23,11 @@ import {
   loadingQuestionHandler,
   questionSuccessHandler,
   questionFailureHandler,
-  getQuestion
+  getQuestion,
+  loadingAskQuestionHandler,
+  askQuestionSuccessHandler,
+  askQuestionFailureHandler,
+  askQuestion
 } from './questionActions';
 import {
   loadingCommentsHandler,
@@ -64,5 +68,9 @@ export {
   meetupsFailureHandler,
   loadingMeetupHandler,
   meetupSuccessHandler,
-  meetupFailureHandler
+  meetupFailureHandler,
+  loadingAskQuestionHandler,
+  askQuestionSuccessHandler,
+  askQuestionFailureHandler,
+  askQuestion
 };
